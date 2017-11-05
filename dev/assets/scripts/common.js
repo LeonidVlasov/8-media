@@ -1,48 +1,57 @@
-jQuery(document).ready(function ($) {
-	initInsta();
-});
+document.addEventListener("DOMContentLoaded", function (e) {
 
-jQuery(window).on('load', function () {
-	mobileNav.init('.header__menu');
-});
+	
+	document.addEventListener('click', function(e) {
+		if (e.target.classList.contains('js-nav__link')) {
+			let pressedButton = e.target;
+		
+			let buttons = document.querySelectorAll('.js-nav__link');
+			let images = document.querySelectorAll('.js-header__image');
+			let descript = document.querySelectorAll('.js-descript__container');
 
-var mobileNav = {
-	className: '.js_mobile-nav',
-	mobileMenuClassName: '.mobile-nav__menu',
-	activeClass: 'open',
-	init: function (mainMenuClassName) {
-		if (!$(this.mobileMenuClassName).children().length) {
-			$(mainMenuClassName).children().clone().prependTo(this.mobileMenuClassName);
+			let pressedButtonIndex;
+
+			buttons.forEach(function(element, i) {
+				element.classList.remove('nav__link--active');
+				images[i].classList.remove('header__image--active');
+				descript[i].classList.remove('descript__container--active');
+			});
+
+			for (let i = 0; i < buttons.length; i++) {
+				if (pressedButton === buttons[i]) {
+					pressedButtonIndex = i;
+				}
+			}
+
+			buttons[pressedButtonIndex].classList.add('nav__link--active');
+			images[pressedButtonIndex].classList.add('header__image--active');
+			descript[pressedButtonIndex].classList.add('descript__container--active');
 		}
-
-		$(document).on('click', '.burger', function () {
-			mobileNav.toggle();
-		});
-	},
-	open: function () {
-		$(this.className).addClass(this.activeClass);
-	},
-	close: function () {
-		$(this.className).removeClass(this.activeClass);
-	},
-	toggle: function () {
-		$(this.className).hasClass(this.activeClass) ? this.close() : this.open();
-	}
-};
-
-function initInsta() {
-	var $insta = $('.insta');
-	var dataImg;
-
-	$insta.on('click', function(){
-		if ($(event.target).hasClass('insta__item')) {
-			dataImg = $(event.target).data('img');
-			$('.modal').addClass('open');
-			$('.modal__body').css({'background-image': 'url(' + dataImg + ')'});
-		}
-	})
-
-	$('.modal').on('click', function(){
-		$('.modal').removeClass('open');
 	});
-}
+
+		$('.gallery').slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 2,
+			autoplay: true,
+			autoplaySpeed: 2000,
+			arrows: false,
+			slide: 'figure'
+			// responsive: [{
+			// 		breakpoint: 1200,
+			// 		settings: {
+			// 			slidesToShow: 3,
+			// 			slidesToScroll: 2,
+			// 			infinite: true
+			// 		}
+			// 	},
+			// 	{
+			// 		breakpoint: 620,
+			// 		settings: {
+			// 			slidesToShow: 1,
+			// 			slidesToScroll: 1
+			// 		}
+			// 	}
+			// ]
+		});
+});

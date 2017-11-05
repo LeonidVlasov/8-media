@@ -4,74 +4,164 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Blank Template</title> 
+  <title>8-mate</title> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-  <div class="body-wrapper">
-    <header id="header" class="header">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-6 header__column">
-                    <a href="/" class="header__logo logo">
-                        <img src="assets/images/kfund-logo.svg" alt="logo">
+  <div class="wrapper">
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__pic header__pic--active">
+                <img class="header__image js-header__image header__image--active" src="./assets/img/about-pic-1.jpg" alt="title-picture">
+                <img class="header__image js-header__image" src="./assets/img/offers-pic-1.jpg" alt="title-picture">
+                <img class="header__image js-header__image" src="./assets/img/offers-pic-2.jpg" alt="title-picture">
+                <img class="header__image js-header__image" src="./assets/img/offers-pic-1.jpg" alt="title-picture">
+            </div>
+            <div class="header__descript descript">
+                <div class="descript__container js-descript__container descript__container--active">
+                    <h2 class="descript__header">Creation</h1>
+                    <p class="descript__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere accumsan venenatis. Maecenas mauris
+                            lacus, efficitur ultricies pretium nec, cursus ut risus. Nullam felis augue, varius eget luctus in, finibus
+                            non enim. Nunc molestie felis risus, vitae volutpat magna lobortis ac.</p>
+                    <p class="descript__paragraph">Nullam molestie vestibulum tortor, sed vulputate nisl commodo eget. Fusce et euismod orci. Sed imperdiet
+                            lectus nunc, efficitur lobortis orci sollicitudin et. </p>
+                    <a href="#" class="descript__link link">
+                        <span class="link__text">read more</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="col-6 header__column header__column--right">
-                    <div class="header__additional">
-                        <div class="header__search">
-                            <button class="btn--nobtn">
-                                <i class="kf-icon kf-icon-search icon__search" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                        <ul class="header__lang lang">
-                            <li class="lang__item lang__item--active"><a href="#" class="lang__link">Укр</a></li>
-                            <li class="lang__item"><a href="#" class="lang__link">Рус</a></li>
-                        </ul>
-                    </div>
-    
-                    <nav class="header__nav" role="navigation">
-                        <ul class="header__menu menu">
-                            <li><a href="#" class="menu__link">підприємництво</a></li>
-                            <li><a href="#" class="menu__link">Освіта</a></li>
-                            <li><a href="#" class="menu__link">книги</a></li>
-                            <li><a href="#" class="menu__link">книги</a></li>
-                            <li><a href="#" class="menu__link">книги</a></li>
-                            <!--<li><a href="#">календар</a></li>-->
-                        </ul>
-                    </nav>
-    
-                    <button class="burger header__burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                <div class="descript__container js-descript__container">
+                    <h2 class="descript__header">Creation</h1>
+                        <p class="descript__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere accumsan venenatis. Maecenas mauris lacus,
+                            efficitur ultricies pretium nec, cursus ut risus. Nullam felis augue, varius eget luctus in, finibus non enim.
+                            Nunc molestie felis risus, vitae volutpat magna lobortis ac.</p>
+                        <p class="descript__paragraph">Nullam molestie vestibulum tortor, sed vulputate nisl commodo eget. Fusce et euismod orci. Sed imperdiet lectus nunc,
+                            efficitur lobortis orci sollicitudin et. </p>
+                        <a href="#" class="descript__link link">
+                            <span class="link__text">read more</span>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                </div>
+                <div class="descript__container js-descript__container">
+                    <h2 class="descript__header">Creation</h1>
+                        <p class="descript__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere accumsan venenatis. Maecenas mauris lacus,
+                            efficitur ultricies pretium nec, cursus ut risus. Nullam felis augue, varius eget luctus in, finibus non enim.
+                            Nunc molestie felis risus, vitae volutpat magna lobortis ac.</p>
+                        <p class="descript__paragraph">Nullam molestie vestibulum tortor, sed vulputate nisl commodo eget. Fusce et euismod orci. Sed imperdiet lectus nunc,
+                            efficitur lobortis orci sollicitudin et. </p>
+                        <a href="#" class="descript__link link">
+                            <span class="link__text">read more</span>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                </div>
+                <div class="descript__container js-descript__container">
+                    <h2 class="descript__header">Creation</h1>
+                        <p class="descript__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere accumsan venenatis. Maecenas mauris lacus,
+                            efficitur ultricies pretium nec, cursus ut risus. Nullam felis augue, varius eget luctus in, finibus non enim.
+                            Nunc molestie felis risus, vitae volutpat magna lobortis ac.</p>
+                        <p class="descript__paragraph">Nullam molestie vestibulum tortor, sed vulputate nisl commodo eget. Fusce et euismod orci. Sed imperdiet lectus nunc,
+                            efficitur lobortis orci sollicitudin et. </p>
+                        <a href="#" class="descript__link link">
+                            <span class="link__text">read more</span>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
                 </div>
             </div>
         </div>
-    </header>
-    
-    <!-- MOBILE NAV -->
-    <div class="mobile-nav js_mobile-nav">
-        <nav>
-            <ul class="mobile-nav__menu">
+        <nav class="header__nav">
+            <ul class="nav__menu">
+                <li class="nav__item ">
+                    <a href="#" class="nav__link js-nav__link">elegance</a>
+                </li>
+                <li class="nav__item ">
+                    <a href="#" class="nav__link js-nav__link nav__link--active">creation</a>
+                </li>
+                <li class="nav__item ">
+                    <a href="#" class="nav__link js-nav__link">family office</a>
+                </li>
+                <li class="nav__item ">
+                    <a href="#" class="nav__link js-nav__link">experience</a>
+                </li>
             </ul>
         </nav>
-        <button class="burger mobile-nav__burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
+    </header>
+    
+    <main>
+        <div class="top">
+            <h2 class="top__header">Our Creations</h2>
+            <a href="#" class="descript__link link">
+                <span class="link__text">see all</span>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="gallery">
+            <figure class="gallery__item">
+                <div class="gallery__container">
+                    <img src="./assets/img/offers-pic-1.jpg" alt="" class="pic">
+                </div>
+                <figcaption class="gallery__spec spec">
+                    <h6 class="spec__header">Lake Annecy</h6>
+                    <p class="spec__text">Aliquam erat volutpat. Integer finibus augue in neque eleifend, vitae auctor augue blandit.</p>
+                </figcaption>
+            </figure>
+            <figure class="gallery__item">
+                <div class="gallery__container">
+                    <img src="./assets/img/offers-pic-2.jpg" alt="" class="pic">
+                </div>
+                <figcaption class="gallery__spec spec">
+                    <h6 class="spec__header">Courchevel</h6>
+                    <p class="spec__text">Nunc id libero lobortis, bibendum velit eget, placerat metus.</p>
+                </figcaption>
+            </figure>
+            <figure class="gallery__item">
+                <div class="gallery__container">
+                    <img src="assets/img/offers-pic-3.jpg" alt="" class="pic">
+                </div>
+                <figcaption class="gallery__spec spec">
+                    <h6 class="spec__header">Lac du Bourget</h6>
+                    <p class="spec__text">Aliquam erat volutpat. Integer finibus augue in neque eleifend, vitae auctor augue blandit.</p>
+                </figcaption>
+            </figure>
+            <figure class="gallery__item">
+                <div class="gallery__container">
+                    <img src="./assets/img/offers-pic-1.jpg" alt="" class="pic">
+                </div>
+                <figcaption class="gallery__spec spec">
+                    <h6 class="spec__header">Lake Annecy</h6>
+                    <p class="spec__text">Aliquam erat volutpat. Integer finibus augue in neque eleifend, vitae auctor augue blandit.</p>
+                </figcaption>
+            </figure>
+            <figure class="gallery__item">
+                <div class="gallery__container">
+                    <img src="./assets/img/offers-pic-2.jpg" alt="" class="pic">
+                </div>
+                <figcaption class="gallery__spec spec">
+                    <h6 class="spec__header">Courchevel</h6>
+                    <p class="spec__text">Nunc id libero lobortis, bibendum velit eget, placerat metus.</p>
+                </figcaption>
+            </figure>
+            <figure class="gallery__item">
+                <div class="gallery__container">
+                    <img src="assets/img/offers-pic-3.jpg" alt="" class="pic">
+                </div>
+                <figcaption class="gallery__spec spec">
+                    <h6 class="spec__header">Lac du Bourget</h6>
+                    <p class="spec__text">Aliquam erat volutpat. Integer finibus augue in neque eleifend, vitae auctor augue blandit.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/assets/scripts/libs/jquery-3.2.1.min.js"><\/script>')</script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+    <script src="./assets/scripts/common.js"></script>
   </div>
-  <footer class="footer">
-  </footer>
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="/assets/scripts/libs/jquery-3.2.1.min.js"><\/script>')</script>
-  
-  <script src="./assets/scripts/common.js"></script>
 </body>
 </html>
