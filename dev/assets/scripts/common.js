@@ -34,22 +34,22 @@ document.addEventListener("DOMContentLoaded", function (e) {
 			autoplay: true,
 			autoplaySpeed: 5000,
 			arrows: false,
-			slide: 'figure'
-			// responsive: [{
-			// 		breakpoint: 1200,
-			// 		settings: {
-			// 			slidesToShow: 3,
-			// 			slidesToScroll: 2,
-			// 			infinite: true
-			// 		}
-			// 	},
-			// 	{
-			// 		breakpoint: 620,
-			// 		settings: {
-			// 			slidesToShow: 1,
-			// 			slidesToScroll: 1
-			// 		}
-			// 	}
-			// ]
+			slide: 'figure',
+			responsive: [{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 2,
+						infinite: true
+					}
+				},
+				{
+					breakpoint: 620,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
 		});
 });
