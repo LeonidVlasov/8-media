@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function (e) {
 
-	
 	document.addEventListener('click', function(e) {
 		if (e.target.classList.contains('js-nav__link')) {
+			
 			let pressedButton = e.target;
 		
 			let buttons = document.querySelectorAll('.js-nav__link');
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 		$('.gallery').slick({
 			infinite: true,
 			slidesToShow: 3,
-			slidesToScroll: 2,
+			slidesToScroll: 1,
 			autoplay: true,
-			autoplaySpeed: 2000,
+			autoplaySpeed: 5000,
 			arrows: false,
 			slide: 'figure'
 			// responsive: [{
