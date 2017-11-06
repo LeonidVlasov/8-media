@@ -12,16 +12,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
 			let pressedButtonIndex;
 
 			buttons.forEach(function(element, i) {
+				if (pressedButton === buttons[i]) {
+					pressedButtonIndex = i;
+				}
+
 				element.classList.remove('nav__link--active');
 				images[i].classList.remove('header__image--active');
 				descript[i].classList.remove('descript__container--active');
 			});
-
-			for (let i = 0; i < buttons.length; i++) {
-				if (pressedButton === buttons[i]) {
-					pressedButtonIndex = i;
-				}
-			}
 
 			buttons[pressedButtonIndex].classList.add('nav__link--active');
 			images[pressedButtonIndex].classList.add('header__image--active');
