@@ -4,6 +4,17 @@
     margin: 100px 0;
     padding-left: 200px;
     overflow: hidden;
+
+    @include tablet_pro {
+        margin: 50px 0;
+        padding: 50px;
+    }
+
+    @include tablet {
+        margin: 20px 0;
+        padding: 30px 10px;
+    }
+
     &__top {
         display: flex;
         justify-content: space-between;
@@ -11,6 +22,15 @@
         margin-right: 200px;
         padding: 20px 5px;
         border-bottom: 1px solid #E4E6E8;
+
+        @include tablet_pro {
+            margin-right: 0px;
+        }
+
+        @include tablet {
+            margin-right: 0px;
+            padding: 10px 15px;
+        }
     }
     
     &__header {
@@ -43,24 +63,32 @@
 
 .gallery {
     margin-top: 30px;
-    margin-right: -230px;
+    margin-right: -15%;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+        margin: 10px 5px;
+    }
     
     &__item {
         margin-right: 25px; 
         height: 550px;
-        width: 400px; 
+        width: 400px;
+
+        @include tablet {
+           margin-right: 0;
+        }
     }
 
     &__pic {
         height: 100%;
         width: 100%;
-        -webkit-transition: all 1.5s ease;
-        -moz-transition: all 1.5s ease;
-        -o-transition: all 1.5s ease;
-        -ms-transition: all 1.5s ease;
-        transition: all 1.5s ease;
+        transition: all 1.5s $ease;
+
+        @include tablet_pro {
+           object-fit: cover;
+        }
     }
 
     &__container {
@@ -68,18 +96,34 @@
         height: 400px;
         overflow: hidden;
         border-radius: 2%;
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
-        -o-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-        transition: all 1s ease;
+        transition: all 1s $ease;
+
         &:hover {
             border-radius: 10%;
             transform: scale(0.9);
             cursor: pointer;
+
+            @include tablet_pro {
+                transform: scale(1);
+                border-radius: inherit;
+            }
+
+            @include tablet {
+                transform: scale(1);
+                border-radius: inherit;
+            }
         }
+
         &:hover img {
             transform: scale(1.5);
+
+            @include tablet_pro {
+                transform: scale(1);
+            }
+
+            @include tablet {
+                transform: scale(1);
+            }
         }
     }
 
@@ -113,7 +157,7 @@
     }
 }
 
-//----------------------
+// arrow animation
 
 .arrow-animated {
     height: 5px;

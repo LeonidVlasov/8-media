@@ -3,9 +3,12 @@
 var gulp            = require('gulp'),
     sass            = require('gulp-sass'),
     browserSync     = require('browser-sync'),
+    autoprefixer = require('autoprefixer'),
+    postcss      = require('gulp-postcss'),
     sourcemaps      = require('gulp-sourcemaps'),
     rigger          = require('gulp-rigger'),
-    notify          = require('gulp-notify');
+    notify          = require('gulp-notify'),
+    imagemin        = require('gulp-imagemin');
  
     
 var path = {
@@ -14,10 +17,12 @@ var path = {
     outputHtml : './dev/templates/*.html',
     outputSass : './dev/assets/sass/**/*.scss',
     outputStyles : './dev/assets/css',
-    outputScripts: '' 
+    outputImages: './dev/assets/img/*'
   },
   release : {
-    output  : './release/'
+    output  : './release/',
+    outputStyles : './release/assets/css',
+    outputImages: './release/assets/img'
   }
 }
     
@@ -25,7 +30,7 @@ var path = {
 gulp.task('html', function () {
     return gulp.src(path.dev.outputHtml)
         .pipe(rigger())
-        .pipe(gulp.dest(path.dev.output))
+        .pipe(gulp.dest(path.release.output))
         .pipe(browserSync.reload({stream:true}));
 });
 
@@ -34,15 +39,22 @@ gulp.task('sass', function () {
     // .pipe(sourcemaps.init())
     .pipe(sass())
       .on('error', notify.onError())
+    .pipe(postcss([ autoprefixer({ browsers: ['last 5 versions'] }) ]))
     // .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.dev.outputStyles))
+    .pipe(gulp.dest(path.release.outputStyles))
     .pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('imagemin', function () {
+  gulp.src(path.dev.outputImages)
+      .pipe(imagemin())
+      .pipe(gulp.dest(path.release.outputImages))
 });
 
 gulp.task('browser-sync', function() {
 	browserSync.init({
 		server: {
-			baseDir: path.dev.output
+			baseDir: path.release.output
 		}
 	});
 });
@@ -51,7 +63,7 @@ gulp.task('bs-reload', function () {
 	browserSync.reload();
 });
  
-gulp.task('default', ['html','sass', 'browser-sync'], function () {
+gulp.task('default', ['html','sass', 'imagemin', 'browser-sync'], function () {
   gulp.watch('./dev/assets/sass/**/*.scss', ['sass']);
   gulp.watch('./dev/templates/**/*.html', ['html']);
 });
