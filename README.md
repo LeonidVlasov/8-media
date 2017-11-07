@@ -1,1 +1,1 @@
-[DEMO]()
+[8-meida](https://leonidvlasov.github.io/8-media/release/index.html)
